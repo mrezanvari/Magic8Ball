@@ -6,9 +6,13 @@ to simply make this whole program more modular and customizable...
 """
 
 import quantumrandom
+import os
 from os import system, name
 import re
 from colorPrint import *
+
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 def clearConsole():
   
@@ -23,10 +27,10 @@ def clearConsole():
 class magic8Ball:
     def __init__(self, r=0, x=0, y=0):
         # self.radius = r # for future refrence, I may make a new one with a sizable ball!
-        self.responsDect = open('responsesDect', 'r').read().split('\n') # get all of the responses
+        self.responsDect = open(os.path.join(__location__,'responsesDect'), 'r').read().split('\n') # get all of the responses
         # self.x = x
         # self.y = y
-        self.frames = open('ballFrames', 'r').read().split('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')  # get all of the frames
+        self.frames = open(os.path.join(__location__,'ballFrames'), 'r').read().split('+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')  # get all of the frames
     
     
 
