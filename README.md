@@ -1,6 +1,7 @@
 # Magic8Ball
 
-Simple Magic 8 Ball with python and true random response! Random responses are generated using quantumrandom library.\ \
+Simple Magic 8 Ball with python and true random response! Random responses are generated using quantumrandom library.\
+\ 
 Works best in MacOS Terminal.\
 Simply download/clone the repository and run main.py in your terminal.
 
